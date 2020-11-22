@@ -28,3 +28,12 @@ for pair in chicken.items():
 
 for (k,v) in chicken.items():
     print(k,'-->',v)
+
+
+languages = {'ruby', 'python', 'javascript'}
+type(languages) # set
+# no error if duplicated elements are added, it doesn't appear 
+
+voted_languages = ['ruby', 'python', 'JS', 'scala', 'ruby', 'python']
+set(voted_languages)
+# {'javascript', 'python', 'ruby', 'scala'}
