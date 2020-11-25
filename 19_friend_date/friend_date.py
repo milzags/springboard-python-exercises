@@ -1,3 +1,7 @@
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
+
 def friend_date(a, b):
     """Given two friends, do they have any hobbies in common?
 
@@ -9,10 +13,20 @@ def friend_date(a, b):
         >>> elmo = ('Elmo', 5, ['hugging', 'being nice'])
         >>> sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
         >>> gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
-
         >>> friend_date(elmo, sauron)
         False
-
         >>> friend_date(sauron, gandalf)
         True
     """
+    
+
+    # turn the tuple into a set and compare of there is an intersection between the two sets
+
+    if set(a[2]) & set(b[2]):
+        return True
+    else: 
+        return False
+
+print(friend_date(elmo, sauron))
+print(friend_date(sauron, gandalf))
+
