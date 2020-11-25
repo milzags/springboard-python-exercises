@@ -4,3 +4,9 @@ def compact(lst):
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])
         [1, 2, 'All done']
     """
+
+    truthy_list = [element for element in lst if bool(element)]
+
+    return truthy_list
+
+print(compact([0, 1, 2, '', [], False, (), None, 'All done']))
