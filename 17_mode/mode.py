@@ -12,3 +12,6 @@ def mode(nums):
         2
     """
     
+    return max(set(nums), key=nums.count)
+
+print(mode([2, 2, 3, 3, 2]))
